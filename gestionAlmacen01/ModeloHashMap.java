@@ -16,28 +16,7 @@ public class ModeloHashMap extends ModeloAbs
     {
        lista=new HashMap  <Integer,Producto>();
     }
-    public boolean insertarProducto (Producto p) {
-    	lista.put(p.getCodigo(), p);
-    	return true;
-    }
+
     
-    public boolean borrarProducto (int codigo) {
-    	return (lista.remove(codigo) != null);
-    }
     
-    public producto buscarProducto (int codigo) {
-    	return lista.get(codigo);
-    }
-    
-    public void listarProductos () {
-    	int cont = 1;
-    	for (Map.Entry valor : lista.entrySet()) {
-    		System.out.println("nº" + cont + valor.getValue());
-    		cont++;
-    	}
-    }
-    
-    public boolean modificarProducto (Producto nuevo) {
-    	return (lista.containsValue(nuevo));
-    }
 }
